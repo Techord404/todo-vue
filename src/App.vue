@@ -1,9 +1,14 @@
 <template>
-  <div class="name">
-    {{ name }}
-  </div>
-  <input type="text" v-bind:value="name">
-  <button class="btn btn-primary" v-on:click="updateName">Click</button>
+  <input
+      type="text"
+      v-model="name"
+  >
+  <button
+      class="btn btn-primary"
+      @click="onSubmit"
+  >
+    Click
+  </button>
 </template>
 
 <script>
@@ -13,20 +18,14 @@ import { ref } from "vue";
 export default {
   setup() {
     const name = ref('Techord123');
-    //
-    // const greeting = (name) => {
-    //   return 'Hello, ' + name;
-    // };
-    //
-    // const greet = greeting(name);
 
-    const updateName = () => {
-      name.value = 'Techrod';
+    const onSubmit = () => {
+      console.log(name.value)
     }
 
     return {
       name,
-      updateName
+      onSubmit,
     };
   }
 }
