@@ -6,9 +6,12 @@
 </template>
 
 <script>
+
+import { ref } from "vue";
+
 export default {
   setup() {
-    let name = 'Techord123';
+    const name = ref('Techord123');
     //
     // const greeting = (name) => {
     //   return 'Hello, ' + name;
@@ -17,7 +20,7 @@ export default {
     // const greet = greeting(name);
 
     const updateName = () => {
-      name = 'Techrod';
+      name.value = 'Techrod';
     }
 
     return {
