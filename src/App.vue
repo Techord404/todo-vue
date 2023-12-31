@@ -2,6 +2,7 @@
   <div class="name">
     {{ name }}
   </div>
+  <input type="text" v-bind:value="name">
   <button class="btn btn-primary" v-on:click="updateName">Click</button>
 </template>
 
