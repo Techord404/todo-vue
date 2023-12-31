@@ -1,4 +1,21 @@
 <template>
-  Kossie Coder
+  <div class="name">{{ name }}</div>
 </template>
 
+<script>
+export default {
+  setup() {
+    const name = 'Techor312d';
+
+    return {
+      name
+    };
+  }
+}
+</script>
+
+<style>
+  .name {
+    color: red;
+  }
+</style>
